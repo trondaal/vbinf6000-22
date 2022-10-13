@@ -84,7 +84,7 @@
                         select="bib:header('Agenter identifisert med URI', $format)"/>
                 <xsl:for-each-group
                         select="marc:record/marc:datafield[@tag = ('100', '600', '700') and not(marc:subfield[@code='t']) and count(marc:subfield[@code = '1']) = 1 and starts-with(normalize-space(marc:subfield[@code = '1']), 'http')]"
-                        group-by="normalize-space(marc:subfield[@code = ('1')])">
+                        group-by="marc:subfield[@code = ('1')][starts-with(., 'http')]/normalize-space()">
                         <xsl:sort select="(current-group()/marc:subfield[@code='a'])[1]"/>
                         <xsl:copy-of
                                 select="bib:list(current-grouping-key() || (' (' || string-join(distinct-values(current-group()/@tag), ', ') || ') : ' || string-join(distinct-values(current-group()/marc:subfield[@code='a']/replace(., '[ \.,/:]+$', '')), ' / ')    ), $format)"

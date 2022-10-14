@@ -899,7 +899,7 @@
                 <xsl:copy-of
                         select="bib:header(('Verk til verk RDA relasjonstyper i 7XX $4-subfelt + label fra RDA registry'), $format)"/>
                 <xsl:choose>
-                        <xsl:when test="not(/*//marc:datafield[@tag = ('700', '710', '711', '730', '758') and marc:subfield[(../@tag = ('700', '710', '711') and @code = 't') or (../@tag = ('730') and @code = 't')] and @ind2 != '2' and (some $x in marc:subfield[@code = '4'] satisfies starts-with($x, 'http'))])">
+                        <xsl:when test="not(/*//marc:datafield[@tag = ('700', '710', '711', '730', '758') and marc:subfield[(../@tag = ('700', '710', '711') and @code = 't') or (../@tag = ('730', '758'))] and @ind2 != '2' and (some $x in marc:subfield[@code = '4'] satisfies starts-with($x, 'http'))])">
                                 <xsl:copy-of
                                         select="bib:printasline('Ser ut som dere mangler verk-til-verk relasjoner?', $format)"/>
                         </xsl:when>
@@ -908,7 +908,7 @@
                                         <xsl:when test="$format eq 'fo'">
                                                 <fo:list-block provisional-distance-between-starts="20pt" provisional-label-separation="6pt">
                                                         <xsl:for-each-group
-                                                                select="/*//marc:datafield[@tag = ('700', '710', '711', '730', '758') and marc:subfield[(../@tag = ('700', '710', '711') and @code = 't') or (../@tag = ('730') and @code = 't')] and @ind2 != '2' and (some $x in marc:subfield[@code = '4'] satisfies starts-with($x, 'http'))]"
+                                                                select="/*//marc:datafield[@tag = ('700', '710', '711', '730', '758') and marc:subfield[(../@tag = ('700', '710', '711') and @code = 't') or (../@tag = ('730', '758') ) ] and @ind2 != '2' and (some $x in marc:subfield[@code = '4'] satisfies starts-with($x, 'http'))]"
                                                                 group-by="if (marc:subfield[@code = '4' and starts-with(., 'http')]) then marc:subfield[@code = '4' and starts-with(., 'http')]/normalize-space() else 'mangler $4 med URI'">
                                                                 <xsl:sort select="current-grouping-key()"/>
                                                                 <xsl:variable name="label" select="document('rda.labels.rdf')/rdf:RDF/rdf:Description[@rdf:about=current-grouping-key()]/rdfs:label"/>

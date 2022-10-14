@@ -938,7 +938,7 @@
                                         </xsl:when>
                                         <xsl:otherwise>
                                                 <xsl:for-each-group
-                                                        select="/*//marc:datafield[@tag = ('700', '710', '711') and marc:subfield[@code = 't'] and @ind2 != '2' and (some $x in marc:subfield[@code = '4'] satisfies starts-with($x, 'http'))]"
+                                                        select="/*//marc:datafield[@tag = ('700', '710', '711', '730', '758') and marc:subfield[(../@tag = ('700', '710', '711') and @code = 't') or (../@tag = ('730', '758') ) ] and @ind2 != '2' and (some $x in marc:subfield[@code = '4'] satisfies starts-with($x, 'http'))]"
                                                         group-by="if (marc:subfield[@code = '4' and starts-with(., 'http')]) then marc:subfield[@code = '4' and starts-with(., 'http')] else 'mangler $4 med URI'">
                     
                                                         <xsl:sort select="current-grouping-key()"/>

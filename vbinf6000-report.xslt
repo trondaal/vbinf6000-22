@@ -159,7 +159,7 @@
                         <xsl:copy-of
                                 select="bib:listheader(current-grouping-key() || (' (' || string-join(distinct-values(current-group()/@tag), ', ') || ') : ' || string-join(distinct-values(current-group()/marc:subfield[@code='a']/replace(., '[ \.,/:]+$', '')), ' / ')    ), $format)"
                         />
-                        <xsl:for-each-group select="current-group()" group-by="marc:subfield[@code = ('4') and starts-with(normalize-space(.), 'http')]">
+                        <xsl:for-each-group select="current-group()" group-by="marc:subfield[@code = ('4') and starts-with(normalize-space(.), 'http')]/normalize-space()">
                                 <xsl:variable name="label" select="document('rda.labels.rdf')/rdf:RDF/rdf:Description[@rdf:about eq current-grouping-key()]/rdfs:label"/>
                                 <xsl:copy-of
                                         select="bib:list(current-grouping-key() || ' (' || $label || ')', $format)"

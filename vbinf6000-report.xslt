@@ -153,7 +153,7 @@
                 <xsl:copy-of
                         select="bib:header('Personer med URI og relasjonstyper som er brukt for disse', $format)"/>
                 <xsl:for-each-group
-                        select="marc:record/marc:datafield[@tag = ('100', '110', '111', '600', '610', '611', '700', '710', '711') and not(marc:subfield[@code='t']) and starts-with(normalize-space(marc:subfield[@code = '1']), 'http')]"
+                        select="marc:record/marc:datafield[@tag = ('100', '110', '111', '600', '610', '611', '700', '710', '711') and not(marc:subfield[@code='t']) and starts-with(marc:subfield[@code = '1']/normalize-space(), 'http')]"
                         group-by="marc:subfield[@code = ('1')][starts-with(., 'http')]/normalize-space(.)">
                         <xsl:sort select="(current-group()/marc:subfield[@code='a'])[1]"/>
                         <xsl:copy-of

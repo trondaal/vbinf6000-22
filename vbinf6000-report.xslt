@@ -228,7 +228,7 @@
 
                 <xsl:copy-of select="bib:header('Opplisting som viser bruken av 336 $0', $format)"/>
                 <xsl:for-each-group select="/*//marc:datafield[@tag = ('336')]"
-                        group-by="normalize-space(marc:subfield[@code='0'])">
+                        group-by="marc:subfield[@code='0'][1]">
                         <xsl:copy-of select="bib:fieldlist(current-group()[1], $format)"/>
                 </xsl:for-each-group>
                 

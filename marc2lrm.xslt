@@ -201,7 +201,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -210,7 +210,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -269,7 +269,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -278,7 +278,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -287,7 +287,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -296,7 +296,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -305,7 +305,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -314,7 +314,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -323,7 +323,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -332,7 +332,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -341,7 +341,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -350,7 +350,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -359,7 +359,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -368,7 +368,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -377,7 +377,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -386,7 +386,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type"
                                                   select="'http://www.w3.org/2004/02/skos/core#subjectIndicator'"/>
-                                 <xsl:with-param name="select" select="."/>
+                                 <xsl:with-param name="select" select="replace(., 'nob', 'nor')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -2540,10 +2540,10 @@
                             select="string-join(($record/@id,$this_template_name,$tag,$this_field_position), ':')"/>
             <xsl:attribute name="type" select="'http://rdaregistry.info/Elements/c/C10006'"/>
             <xsl:attribute name="templatename" select="$this_template_name"/>
-            <xsl:for-each select="$record/*:datafield[@tag='700'][. eq $this_field][*:subfield/@code = ('t','l')]">
+            <xsl:for-each select="$record/*:datafield[@tag='700'][. eq $this_field][*:subfield/@code = ('t')]">
                <xsl:copy>
                   <xsl:call-template name="copy-attributes"/>
-                  <xsl:for-each select="*:subfield[@code = ('t','l')]">
+                  <xsl:for-each select="*:subfield[@code = ('t')]">
                      <xsl:if test="@code = 't'">
                         <xsl:copy>
                            <xsl:call-template name="copy-content">
@@ -2553,15 +2553,6 @@
                            </xsl:call-template>
                         </xsl:copy>
                      </xsl:if>
-                     <xsl:if test="@code = 'l'">
-                        <xsl:copy>
-                           <xsl:call-template name="copy-content">
-                              <xsl:with-param name="type"
-                                               select="'http://rdaregistry.info/Elements/e/datatype/P20006'"/>
-                              <xsl:with-param name="select" select="lower-case(.)"/>
-                           </xsl:call-template>
-                        </xsl:copy>
-                     </xsl:if>
                      <xsl:if test="@code = 't'">
                         <xsl:copy>
                            <xsl:call-template name="copy-content">
@@ -2574,10 +2565,10 @@
                   </xsl:for-each>
                </xsl:copy>
             </xsl:for-each>
-            <xsl:for-each select="$record/*:datafield[@tag='710'][. eq $this_field][*:subfield/@code = ('t','l')]">
+            <xsl:for-each select="$record/*:datafield[@tag='710'][. eq $this_field][*:subfield/@code = ('t')]">
                <xsl:copy>
                   <xsl:call-template name="copy-attributes"/>
-                  <xsl:for-each select="*:subfield[@code = ('t','l')]">
+                  <xsl:for-each select="*:subfield[@code = ('t')]">
                      <xsl:if test="@code = 't'">
                         <xsl:copy>
                            <xsl:call-template name="copy-content">
@@ -2586,15 +2577,6 @@
                            </xsl:call-template>
                         </xsl:copy>
                      </xsl:if>
-                     <xsl:if test="@code = 'l'">
-                        <xsl:copy>
-                           <xsl:call-template name="copy-content">
-                              <xsl:with-param name="type"
-                                               select="'http://rdaregistry.info/Elements/e/datatype/P20006'"/>
-                              <xsl:with-param name="select" select="lower-case(.)"/>
-                           </xsl:call-template>
-                        </xsl:copy>
-                     </xsl:if>
                      <xsl:if test="@code = 't'">
                         <xsl:copy>
                            <xsl:call-template name="copy-content">
@@ -2607,10 +2589,10 @@
                   </xsl:for-each>
                </xsl:copy>
             </xsl:for-each>
-            <xsl:for-each select="$record/*:datafield[@tag='711'][. eq $this_field][*:subfield/@code = ('t','l')]">
+            <xsl:for-each select="$record/*:datafield[@tag='711'][. eq $this_field][*:subfield/@code = ('t')]">
                <xsl:copy>
                   <xsl:call-template name="copy-attributes"/>
-                  <xsl:for-each select="*:subfield[@code = ('t','l')]">
+                  <xsl:for-each select="*:subfield[@code = ('t')]">
                      <xsl:if test="@code = 't'">
                         <xsl:copy>
                            <xsl:call-template name="copy-content">
@@ -2619,15 +2601,6 @@
                            </xsl:call-template>
                         </xsl:copy>
                      </xsl:if>
-                     <xsl:if test="@code = 'l'">
-                        <xsl:copy>
-                           <xsl:call-template name="copy-content">
-                              <xsl:with-param name="type"
-                                               select="'http://rdaregistry.info/Elements/e/datatype/P20006'"/>
-                              <xsl:with-param name="select" select="lower-case(.)"/>
-                           </xsl:call-template>
-                        </xsl:copy>
-                     </xsl:if>
                      <xsl:if test="@code = 't'">
                         <xsl:copy>
                            <xsl:call-template name="copy-content">
@@ -2640,24 +2613,15 @@
                   </xsl:for-each>
                </xsl:copy>
             </xsl:for-each>
-            <xsl:for-each select="$record/*:datafield[@tag='730'][. eq $this_field][*:subfield/@code = ('a','l')]">
+            <xsl:for-each select="$record/*:datafield[@tag='730'][. eq $this_field][*:subfield/@code = ('a')]">
                <xsl:copy>
                   <xsl:call-template name="copy-attributes"/>
-                  <xsl:for-each select="*:subfield[@code = ('a','l')]">
+                  <xsl:for-each select="*:subfield[@code = ('a')]">
                      <xsl:if test="@code = 'a'">
                         <xsl:copy>
                            <xsl:call-template name="copy-content">
                               <xsl:with-param name="type" select="'http://www.w3.org/2000/01/rdf-schema#label'"/>
                               <xsl:with-param name="select" select="frbrizer:trim(.)"/>
-                           </xsl:call-template>
-                        </xsl:copy>
-                     </xsl:if>
-                     <xsl:if test="@code = 'l'">
-                        <xsl:copy>
-                           <xsl:call-template name="copy-content">
-                              <xsl:with-param name="type"
-                                               select="'http://rdaregistry.info/Elements/e/datatype/P20006'"/>
-                              <xsl:with-param name="select" select="lower-case(.)"/>
                            </xsl:call-template>
                         </xsl:copy>
                      </xsl:if>
@@ -2898,7 +2862,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type" select="'http://www.w3.org/2000/01/rdf-schema#label'"/>
                                  <xsl:with-param name="select"
-                                                  select="frbrizer:trim(.) || ' (' || ../*:subfield[@code='a']/replace(., '[\s,/:=]+$', '') || ')'"/>
+                                                  select="frbrizer:trim(.) || ' / ' || ../*:subfield[@code='a']/replace(., '[\s,/:=]+$', '') "/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>
@@ -3135,7 +3099,7 @@
                            <xsl:call-template name="copy-content">
                               <xsl:with-param name="type" select="'http://www.w3.org/2000/01/rdf-schema#label'"/>
                               <xsl:with-param name="select"
-                                               select="frbrizer:trim(.) || ' / ' || ../*:subfield[@code='a']/replace(., '[\s,/:=]+$', '')"/>
+                                               select="frbrizer:trim(.) || ' (' || ../*:subfield[@code='a']/replace(., '[\s,/:=]+$', '') || ')'"/>
                            </xsl:call-template>
                         </xsl:copy>
                      </xsl:if>
@@ -4133,7 +4097,7 @@
                <xsl:when test="@templatename = 'MARC041'">
                   <xsl:element name="frbrizer:keyentry">
                      <xsl:variable name="key" as="xs:string*">
-                        <xsl:value-of select="frbrizer:sort-keys(concat('http://id.loc.gov/vocabulary/iso639-2/', (*:datafield[@tag=('041')]/*:subfield[@code=('a', 'd')])[1]))"/>
+                        <xsl:value-of select="frbrizer:sort-keys(concat('http://id.loc.gov/vocabulary/iso639-2/', replace((*:datafield[@tag=('041')]/*:subfield[@code=('a', 'd')])[1], 'nob', 'nor')))"/>
                      </xsl:variable>
                      <xsl:variable name="keyvalue"
                                     select="replace(string-join($key[. != ''], '/'), ' ', '')"/>
@@ -4144,7 +4108,7 @@
                <xsl:when test="@templatename = 'MARC041additional'">
                   <xsl:element name="frbrizer:keyentry">
                      <xsl:variable name="key" as="xs:string*">
-                        <xsl:value-of select="frbrizer:sort-keys(concat('http://id.loc.gov/vocabulary/iso639-2/', (*:datafield[@tag=('041')]/*:subfield[@code=('b', 'e', 'f', 'g', 'i', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 't')])[1]))"/>
+                        <xsl:value-of select="frbrizer:sort-keys(concat('http://id.loc.gov/vocabulary/iso639-2/', replace((*:datafield[@tag=('041')]/*:subfield[@code=('b', 'e', 'f', 'g', 'i', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 't')])[1], 'nob', 'nor')))"/>
                      </xsl:variable>
                      <xsl:variable name="keyvalue"
                                     select="replace(string-join($key[. != ''], '/'), ' ', '')"/>
@@ -4155,7 +4119,7 @@
                <xsl:when test="@templatename = 'MARC008language'">
                   <xsl:element name="frbrizer:keyentry">
                      <xsl:variable name="key" as="xs:string*">
-                        <xsl:value-of select="frbrizer:sort-keys(concat('http://id.loc.gov/vocabulary/iso639-2/', *:controlfield[@tag=('008')]))"/>
+                        <xsl:value-of select="frbrizer:sort-keys(concat('http://id.loc.gov/vocabulary/iso639-2/', replace(*:controlfield[@tag=('008')], 'nob', 'nor')))"/>
                      </xsl:variable>
                      <xsl:variable name="keyvalue"
                                     select="replace(string-join($key[. != ''], '/'), ' ', '')"/>

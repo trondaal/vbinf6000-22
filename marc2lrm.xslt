@@ -147,7 +147,7 @@
                <xsl:copy>
                   <xsl:call-template name="copy-content">
                      <xsl:with-param name="type" select="'http://www.w3.org/2000/01/rdf-schema#label'"/>
-                     <xsl:with-param name="select" select="substring(., 36, 3)"/>
+                     <xsl:with-param name="select" select="replace(substring(., 36, 3), 'nob', 'nor')"/>
                      <xsl:with-param name="marcid" select="$marcid"/>
                   </xsl:call-template>
                </xsl:copy>

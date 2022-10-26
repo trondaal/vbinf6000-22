@@ -2304,7 +2304,7 @@
                               <xsl:call-template name="copy-content">
                                  <xsl:with-param name="type" select="'http://www.w3.org/2000/01/rdf-schema#label'"/>
                                  <xsl:with-param name="select"
-                                                  select="frbrizer:trim(.) || ' (' || ../*:subfield[@code='a']/replace(., '[\s,/:=]+$', '') || ')'"/>
+                                                  select="frbrizer:trim(.) || ' / ' || ../*:subfield[@code='a']/replace(., '[\s,/:=]+$', '')"/>
                               </xsl:call-template>
                            </xsl:copy>
                         </xsl:if>

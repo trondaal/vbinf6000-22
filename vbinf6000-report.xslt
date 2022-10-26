@@ -239,10 +239,24 @@
                         <xsl:copy-of select="bib:fieldlist(current-group()[1], $format)"/>
                 </xsl:for-each-group>
                 
+                <xsl:copy-of select="bib:header('Opplisting som viser bruken av 337 $0', $format)"/>
+                <xsl:for-each-group select="/*//marc:datafield[@tag = ('337')]/marc:subfield[@code='0']"
+                        group-by="normalize-space(.)">
+                        <xsl:sort select="current-grouping-key()"/>
+                        <xsl:value-of select="'* ' || current-grouping-key() || '&#xa;'"/>
+                </xsl:for-each-group>
+                
                 <xsl:copy-of select="bib:header('Opplisting som viser bruken av 338 $a, $b, $0, $2', $format)"/>
                 <xsl:for-each-group select="/*//marc:datafield[@tag = ('338')]"
                         group-by="marc:subfield[@code = 'a'][1] || marc:subfield[@code = 'b'][1] || marc:subfield[@code = '0'][1] || marc:subfield[@code = '2'][1]">
                         <xsl:copy-of select="bib:fieldlist(current-group()[1], $format)"/>
+                </xsl:for-each-group>
+                
+                <xsl:copy-of select="bib:header('Opplisting som viser bruken av 338 $0', $format)"/>
+                <xsl:for-each-group select="/*//marc:datafield[@tag = ('338')]/marc:subfield[@code='0']"
+                        group-by="normalize-space(.)">
+                        <xsl:sort select="current-grouping-key()"/>
+                        <xsl:value-of select="'* ' || current-grouping-key() || '&#xa;'"/>
                 </xsl:for-each-group>
 
                 <xsl:copy-of select="bib:header('Opplisting som viser bruken av 380 $a, $0, $2', $format)"/>

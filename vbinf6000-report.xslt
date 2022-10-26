@@ -769,7 +769,7 @@
                                         <!--<xsl:variable name="titles" select="($collection/marc:record/marc:datafield[@tag = ('130', '240', '630', '730', '830') and marc:subfield[@code='1'][contains(., current-grouping-key()) and current-grouping-key() ne '']]/marc:subfield[@code='a'], $collection/marc:record/marc:datafield[@tag = ('600', '610', '611', '700', '710', '711', '800', '810', '811') and marc:subfield[@code='1'][contains(., current-grouping-key()) and current-grouping-key() ne '']]/marc:subfield[@code='t'])"/>-->
                                         <xsl:variable name="titles" select="distinct-values(($a-fields/marc:subfield[@code='a'], $t-fields/marc:subfield[@code='t']))"/>
                                         <xsl:variable name="types" select="($a-fields[@tag = ('130', '240')], $a-fields[@tag = ('730')][@ind2='2'], $t-fields[@tag = ('700', '710', '711')][@ind2='2'])/../marc:datafield[@tag='380']/marc:subfield[@code='a']"/>
-                                        <xsl:copy-of select="'* ' || normalize-space(string-join($titles, ' / ')) || (if (count($types) > 0) then (' (' || string-join(distinct-values($types), ' / ') || ') ') else (' ')) || ' : ' || current-grouping-key()"/>
+                                        <xsl:copy-of select="'* ' || normalize-space(string-join($titles, ' / ')) || (if (count($types) > 0) then (' (' || string-join(distinct-values($types), ' / ') || ')') else ()) || ' : ' || current-grouping-key()"/>
                                         <xsl:value-of select="bib:newline()"/>
                                 </xsl:for-each-group>
                         </xsl:otherwise>

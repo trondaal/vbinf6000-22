@@ -239,7 +239,8 @@
     </entity>
     
     <!-- Main entry expression -->
-    <entity tag="130, 240" code="1" code-condition="starts-with(., 'http')" condition="count($record/*:datafield[@tag='700' and @ind2 = '2' and *:subfield/@code = 't']) = 0" type="http://rdaregistry.info/Elements/c/C10006" templatename="MARC21-130240-Expression" label="Expression">
+    <entity tag="130, 240" code="1" code-condition="starts-with(., 'http')"  type="http://rdaregistry.info/Elements/c/C10006" templatename="MARC21-130240-Expression" label="Expression">
+        <!-- if we only want to embody the parts : condition="count($record/*:datafield[@tag='700' and @ind2 = '2' and *:subfield/@code = 't']) = 0" -->
         <note>Expression for the title in the 130 or 240, we only create this expression if there is no analytical entries, otherwise we
               assume that it is the parts that are embodied and directly the whole</note>
         <!-- we use 245 as the preferred expression title unless there specifically is a 740 entry -->
@@ -412,7 +413,8 @@
             <relationship type="http://rdaregistry.info/Elements/m/object/P30139"  label="has expression manifested">
                 <target entity="MARC21-130240-Expression"  type="http://rdaregistry.info/Elements/c/C10006"/>
             </relationship>
-            <relationship type="http://rdaregistry.info/Elements/m/object/P30139"  label="has expression manifested">
+            <relationship type="http://rdaregistry.info/Elements/m/object/P30139" condition="not(exists($record/*:datafield[@tag=('240','230')]/*:subfield[@code='1' and starts-with(., 'http')]))" label="has expression manifested">
+                <!-- Analytical expressions are only embodied if there is no parent work -->
                 <target entity="MARC21-700-Expression-Analytical"  type="http://rdaregistry.info/Elements/c/C10006"/>
             </relationship>
             <relationship type="http://rdaregistry.info/Elements/m/datatype/P30002" label="has content type">
@@ -653,8 +655,11 @@
             <element>string-join(frbrizer:trimsort-targets(*:relationship[@type =('http://rdaregistry.info/Elements/e/object/P20037', 'http://rdaregistry.info/Elements/e/object/P20022', 'http://rdaregistry.info/Elements/e/object/P20049', 'http://rdaregistry.info/Elements/e/object/P20330')]/@href), '/')</element>
         </key>
         <relationships>
-            <relationship type="http://rdaregistry.info/Elements/e/object/P20231" label="has work expressed" ilabel="has expression of work" >
-                <target entity="MARC21-700-Work-Analytical" same-field="true" type="http://rdaregistry.info/Elements/c/C10001"/>
+            <relationship type="http://rdaregistry.info/Elements/e/object/P20231" label="has work expressed">
+                <target entity="MARC21-700-Work-Analytical" same-field="true"/>
+            </relationship>
+            <relationship type="http://rdaregistry.info/Elements/e/object/P20074" label="is part of expression">
+                <target entity="MARC21-130240-Expression"/>
             </relationship>
             <relationship type="{$target_subfield}">
                 <target entity="MARC21-100700Person" type="http://rdaregistry.info/Elements/c/C10001" condition="starts-with($target_subfield, 'http://rdaregistry.info/Elements/e/') and frbrizer:linked($anchor_field, $target_field, false())"/>
